@@ -76,11 +76,11 @@
         public function checkVars()
         {
             if (empty($this->numero)) {
-                trigger_error('Numero is a required parameter.');
+                throw new Exception('Numero is a required parameter.');
             }
             elseif (in_array($this->numero, self::$registry)) 
             {
-                trigger_error('ID "'.$this->numero.'" was used already. Please insert a unique name.');
+                throw new Exception('ID "'.$this->numero.'" was used already. Please insert a unique name.',101);
             }
         }
 

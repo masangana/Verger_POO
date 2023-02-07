@@ -16,8 +16,8 @@ class Pommier extends Arbre
 
 }
 
-$monPommier = new Pommier('A1','Pommier', 45);
-$monPommier2 = new Pommier('A2','Pommier2', 45);
+$monPommier = new Pommier('A18','Pommier', 45);
+$monPommier2 = new Pommier('A28','Pommier2', 45);
 echo $monPommier->getEspece() .  "\n";
 echo $monPommier->getMaxFruit() .  "\n";
 echo $monPommier->getMinFruit().  "\n";
