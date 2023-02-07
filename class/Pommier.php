@@ -1,6 +1,6 @@
 <?php
 
-require('Tree.php');
+require_once('Tree.php');
 
 class Pommier extends Arbre
 {
@@ -15,11 +15,11 @@ class Pommier extends Arbre
     }
 
 }
-
+/*
 $monPommier = new Pommier('A18','Pommier', 45);
 $monPommier2 = new Pommier('A28','Pommier2', 45);
 echo $monPommier->getEspece() .  "\n";
 echo $monPommier->getMaxFruit() .  "\n";
 echo $monPommier->getMinFruit().  "\n";
 echo $monPommier->getRecolteFruit().  "\n";
-echo $monPommier->getNumero().  "\n";
+echo $monPommier->getNumero().  "\n";*/
