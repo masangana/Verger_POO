@@ -1,6 +1,6 @@
 <?php
 
-require('tree.php');
+require('Tree.php');
 
 class Poirier extends Arbre
 {

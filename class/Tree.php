@@ -13,11 +13,16 @@
         protected string $numero;
         protected  int $maxFruit = 100;
         protected  int $minFruit = 90;
+
+        protected static $registry = array();
+
         public function __construct($numero, $espece, $recolteFruit)
         {
-            $this->espece = $espece;
             $this->numero = $numero;
+            $this->checkVars();
+            $this->espece = $espece;
             $this->setRecolteFruit($recolteFruit, $this->maxFruit, $this->minFruit);
+            self::$registry[] = $this->numero;
         }
 
         public function setEspece($espece)
@@ -66,6 +71,17 @@
         public function getNumero()
         {
             return $this->numero;
+        }
+
+        public function checkVars()
+        {
+            if (empty($this->numero)) {
+                trigger_error('Numero is a required parameter.');
+            }
+            elseif (in_array($this->numero, self::$registry)) 
+            {
+                trigger_error('ID "'.$this->numero.'" was used already. Please insert a unique name.');
+            }
         }
 
     }
