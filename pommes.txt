@@ -1,0 +1,30 @@
+Array
+(
+    [0] => Pommier Object
+        (
+            [espece:protected] => Pommier
+            [recolteFruit] => 45
+            [numero:protected] => A25
+            [maxFruit] => 50
+            [minFruit] => 40
+        )
+
+    [1] => Pommier Object
+        (
+            [espece:protected] => Pommier
+            [recolteFruit] => 43
+            [numero:protected] => A23
+            [maxFruit] => 50
+            [minFruit] => 40
+        )
+
+    [2] => Pommier Object
+        (
+            [espece:protected] => Pommier
+            [recolteFruit] => 42
+            [numero:protected] => A22
+            [maxFruit] => 50
+            [minFruit] => 40
+        )
+
+)

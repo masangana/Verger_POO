@@ -3,14 +3,6 @@
 require_once('class/Pommier.php');
 require_once('class/Poirier.php');
 
-for ($i=1; $i <11 ; $i++) { 
-    
-    $monPommier = new Pommier('P'.$i,'Pommier', 45);
-    $monPoirier = new Poirier('A'.$i,'Poirier', 15);
-    echo $monPommier->getNumero()." ".$monPommier->getEspece() ." ". $monPommier->getRecolteFruit().  "\n";
-    echo $monPoirier->getNumero()." ".$monPoirier->getEspece() ." ". $monPoirier->getRecolteFruit().  "\n";
-}
-
 echo "===========================================================\n";
 echo "      --------Welcome to Frute system------                \n";
 echo "===========================================================\n";
@@ -20,6 +12,9 @@ echo "1. Add a Pommier \n";
 echo "2. Add a Poirier \n";
 echo "3. list \n";
 
+//$myfile = fopen("pommes.txt", "r");
+//$myfile2 = fopen("poires.txt", "r");
+
 $pommierList = [];
 $poirierList = [];
 
@@ -27,6 +22,8 @@ while (true) {
     
     $line = readline("Choose an option : ");
     if ($line == "exit") {
+        file_put_contents("pommes.txt", print_r($pommierList, true));
+        //file_put_contents("poires.txt", print_r($poirierList, true));
         break;
     }elseif( $line == '1'){
         echo "Add a Pommier  \n";
