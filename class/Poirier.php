@@ -1,6 +1,6 @@
 <?php
 
-require('Tree.php');
+require_once('Tree.php');
 
 class Poirier extends Arbre
 {
@@ -15,10 +15,11 @@ class Poirier extends Arbre
     }
 
 }
-
+/*
 $monPoirier = new Poirier('A2', 'Poirier', 15);
 echo $monPoirier->getEspece() .  "\n";
 echo $monPoirier->getMaxFruit() .  "\n";
 echo $monPoirier->getMinFruit().  "\n";
 echo $monPoirier->getRecolteFruit().  "\n";
 echo $monPoirier->getNumero().  "\n";
+*/
